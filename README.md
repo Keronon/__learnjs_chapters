@@ -8,6 +8,6 @@ repo for : nodeJS pre-working learning
 
 ### Curantly contains:
 - 1st book
-  - 1st chapter
-    - 1st article
-    - 2nd article
+  - 2nd chapter
+    - 1st task
+    - 2nd task
