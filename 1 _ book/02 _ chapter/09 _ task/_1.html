@@ -1,0 +1,35 @@
+<script>
+
+let i = 3;
+while (i)
+{ alert( i-- ); } // последнее выводимое i = 1, т.к. когда i = 0, значение автоматически интерпретируется как false
+
+    i = 0;
+while (++i < 5) alert( i ); // 1 2 3 4
+
+    i = 0;
+while (i++ < 5) alert( i ); // 1 2 3 4 5
+
+for (    i = 0; i < 5; i++) alert( i ); // 0 1 2 3 4
+
+for (    i = 0; i < 5; ++i) alert( i ); // 0 1 2 3 4
+
+for (    i = 2; i < 11; i += 2) console.log(i);
+
+    i = 0;
+while (i < 3) alert( `number ${i++}!` );
+
+while ((res = prompt(`Введите число больше 100`)) !== null && res <= 100) {}
+
+const from = 20;
+const to   = 40;
+for (    i = from; i < to; i++)
+{
+    let simple = true;
+    for (let j = 2; j < i; j++)
+        if (i % j === 0) simple = false;
+
+    if (simple) console.log(i);
+}
+
+</script>

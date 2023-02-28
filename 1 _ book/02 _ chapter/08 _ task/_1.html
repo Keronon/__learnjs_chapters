@@ -1,0 +1,30 @@
+<script>
+
+alert( null || 2 || undefined );    // 2
+alert( alert(1) || 2 || alert(3) ); // 1 2
+alert( 1 && null && 2 );            // null
+alert( alert(1) && alert(2) );      // 1 undefined
+alert( null || 2 && 3 || 4 );       // 3
+
+if (-1 || 0)         alert( 'first' );  // -1
+if (-1 && 0)         alert( 'second' ); // 0
+if (null || -1 && 1) alert( 'third' );  // 1
+
+let res;
+if ((res = prompt(`Кто там?`)) === null || res === ``)
+    alert(`Отменено`);
+else if (res === `Админ`)
+{
+    if ((res = prompt(`Пароль?`)) === null || res === ``)
+        alert(`Отменено`);
+    else if (res === `Я Главный`)
+    {
+        alert(`Здравствуйте!`);
+    }
+    else
+        alert(`Неверный пароль`);
+}
+else
+    alert(`Я вас не знаю`);
+
+</script>

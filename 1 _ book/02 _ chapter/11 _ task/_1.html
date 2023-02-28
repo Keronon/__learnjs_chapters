@@ -1,0 +1,33 @@
+<script>
+
+function checkAge(age) // в отличии от первого варианта, в котором confirm находится в else,
+{                      // здесь confirm будет выводится при каждом запуске функции
+    if (age > 18)      // ( в первом же варианте только если age <= 18 )
+    { return true; }
+    // ...
+    return confirm('Родители разрешили?');
+}
+
+function checkAge_1(age)
+{
+    return age > 18 ? true : confirm('Родители разрешили?');
+}
+function checkAge_2(age)
+{
+    return (age > 18) || confirm('Родители разрешили?');
+}
+
+function min(a, b)
+{
+    return a > b ? b : a;
+}
+
+function pow(x, n)
+{
+    let res = 1;
+    for (let i = 0; i < n; i++) res *= x;
+    return res;
+}
+alert(`x^n = ` + pow(prompt(`x >>`), prompt(`n >>`)));
+
+</script>
