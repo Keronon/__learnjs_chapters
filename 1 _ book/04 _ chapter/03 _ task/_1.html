@@ -1,0 +1,46 @@
+<script>
+
+const outer = {};
+function A() { return outer; }
+function B() { return outer; }
+let a = new A;
+let b = new B;
+alert( a == b ); // поскольку конструктор - функция, возвращающая объект
+                 // её можно заставить вернуть любой объект,
+                 // например, заставить разные конструкторы вернуть один внешний объект
+
+// = = = = = . = = = = = . = = = = =
+
+function Calculator()
+{
+    this.read = function()
+    {
+        this.num_1 = +prompt(`Введите первое число >>`);
+        this.num_2 = +prompt(`Введите второе число >>`);
+    };
+    this.sum = function() { return this.num_1 + this.num_2; };
+    this.mul = function() { return this.num_1 * this.num_2; };
+}
+
+let calculator = new Calculator();
+calculator.read();
+alert( "Sum=" + calculator.sum() );
+alert( "Mul=" + calculator.mul() );
+
+// = = = = = . = = = = = . = = = = =
+
+function Accumulator(startingValue)
+{
+    this.value = startingValue || 0;
+    this.read = function()
+    {
+        this.value += +prompt(`Сколько добавим? >>`);
+    };
+}
+
+let accumulator = new Accumulator(1); // начальное значение 1
+accumulator.read();                   // прибавит ввод prompt к текущему значению
+accumulator.read();                   // прибавит ввод prompt к текущему значению
+alert(accumulator.value);             // выведет сумму этих значений
+
+</script>
