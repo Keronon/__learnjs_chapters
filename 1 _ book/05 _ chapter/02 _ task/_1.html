@@ -1,0 +1,36 @@
+<script>
+
+alert( +prompt("Введите первое число >>") +
+       +prompt("Введите второе число >>") );
+
+alert( 6.35.toFixed(1) );            // 6.3 - потеря точности при записи дроби
+alert( Math.round(6.35 * 10) / 10 ); // 6.4 - как вариант, увеличить число на порядок, округлить, вернуть числу порядок
+
+const readNumber = () =>
+{
+    while (!isFinite(res = prompt(`Введите число >>`))) {}
+
+    if (res !== null && res.trim() !== '') return +res;
+    return null;
+};
+
+let i = 0;
+while (i != 10)
+{
+    console.log(i += 0.2); // потеря точности при работе с дробями не позволит получить ровно 10 таким способом
+    if (i > 11) break;
+}
+
+let random = (min, max) =>
+{
+    return Math.random() * (max - min) + min;
+};
+
+function randomInteger(min, max)
+{
+    return Math.floor(
+        Math.random() * (max - min + 1) + min
+    );
+}
+
+</script>

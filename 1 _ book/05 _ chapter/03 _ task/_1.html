@@ -1,0 +1,35 @@
+<script>
+
+function ucFirst(str)
+{
+    if (!str) return str;
+    return str[0].toUpperCase() + str.slice(1);
+}
+console.log(ucFirst("вася"));
+
+function checkSpam(str)
+{
+    return str.toLowerCase().includes(`viagra`) ||
+           str.toLowerCase().includes(`xxx`   );
+}
+console.log(checkSpam('buy ViAgRA now' ));
+console.log(checkSpam('free xxxxx'     ));
+console.log(checkSpam("innocent rabbit"));
+
+
+function truncate(str, maxlength)
+{
+    maxlength = maxlength > 0 ? maxlength - 1 : 0;
+
+    return str.length <= maxlength ? str : str.substring(0, maxlength) + `…`;
+}
+console.log(truncate("Вот, что мне хотелось бы сказать на эту тему:", 20));
+console.log(truncate("Всем привет!"                                 , 20));
+
+function extractCurrencyValue(str)
+{
+    return +str.slice(1);
+}
+console.log(extractCurrencyValue('$120') === 120);
+
+</script>
