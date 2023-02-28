@@ -9,5 +9,10 @@ repo for : nodeJS pre-working learning
 ### Curantly contains:
 - 1st book
   - 2nd chapter
-    - 1st task
-    - 2nd task
+    - 12 tasks
+  - 3rd chapter
+    - 2 tasks
+  - 4th chapter
+    - 3 tasks
+  - 5th chapter
+    - 11 tasks
