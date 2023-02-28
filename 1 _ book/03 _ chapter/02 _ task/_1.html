@@ -1,0 +1,17 @@
+<script>
+
+it("Возводит x в степень n", function() // несколько тестов в виде одной функции
+{                                       // не позволит определелить, где именно была ошибка
+    let x = 5;
+
+    let result = x;
+    assert.equal(pow(x, 1), result);
+
+    result *= x;
+    assert.equal(pow(x, 2), result);
+
+    result *= x;
+    assert.equal(pow(x, 3), result);
+});
+
+</script>
