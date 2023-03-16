@@ -16,3 +16,15 @@ repo for : nodeJS pre-working learning
     - 3 tasks
   - 5th chapter
     - 11 tasks
+  - 5th chapter
+    - 11 tasks
+  - 6th chapter
+    - 6 tasks
+  - 8th chapter
+    - 4 tasks
+  - 9th chapter
+    - 4 tasks
+  - 10th chapter
+    - 2 tasks
+  - 11th chapter
+    - 5 tasks
