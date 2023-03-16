@@ -1,0 +1,38 @@
+<script>
+
+function printList_v1(list)
+{
+    console.log(list.value);
+    if (list.next) printList_v1(list.next);
+}
+function printList_v2(list)
+{
+    let _it = list;
+    while (_it)
+    {
+        console.log(_it.value);
+        _it = _it.next;
+    }
+}
+
+let list =
+{
+    value: 1,
+    next:
+    {
+        value: 2,
+        next:
+        {
+            value: 3,
+            next:
+            {
+                value: 4,
+                next: null
+            }
+        }
+    }
+};
+printList_v1(list); // рекурсия немного лаконичнее и понятнее
+printList_v2(list); // цикл не использует ресурсов, требуемых вызову рекурсии
+
+</script>

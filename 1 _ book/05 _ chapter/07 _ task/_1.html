@@ -9,15 +9,4 @@ let read = new WeakSet();
 messages.forEach(message => read.add(message));
 console.log("было ли сообщение 0 прочитано? : " + read.has(messages[0]));
 
-// - - - - - . - - - - - . - - - - -
-
-let messages = [
-    {text: "Hello"       , from: "John" },
-    {text: "How goes?"   , from: "John" },
-    {text: "See you soon", from: "Alice"}
-];
-let read = new WeakMap();
-messages.forEach(message => read.set(message, new Date));
-console.log("когда сообщение 0 было прочитано? : " + read.get(messages[0]).toLocaleDateString());
-
 </script>

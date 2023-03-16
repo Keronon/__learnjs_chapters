@@ -1,0 +1,11 @@
+<script>
+
+let hamster = { stomach: [], eat(food) { this.stomach.push(food); } }; // из-за применения дополнительной функции, движок производит поиск stomach, чтобы внести значение
+let speedy  = { __proto__: hamster, stomach: [] };                     // чтобы stomach удалось найти у самого объекта,
+let lazy    = { __proto__: hamster, stomach: [] };                     // его здесь и следует прописать, или создавать перед добавлением
+
+speedy.eat("apple");
+console.log( speedy.stomach );
+console.log( lazy.stomach   );
+
+</script>

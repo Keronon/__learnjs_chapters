@@ -1,0 +1,12 @@
+<script>
+
+let i = 1;
+function Obj() { this.id = i++; }                            // если у функции-конструктора никто не трогал prototype или prototype.constructor, то всё сработает
+Obj.prototype.constructor = function() { this.id = `fun`; }; // - если же они были редактированы,
+                                                             // - то prototype.constructor должен быть настроен схожим образом или установлен как Obj вручную,
+let obj1 = new Obj();                                        // - чтобы у созданных объектов была ссылка на функцию-конструктор через прототип,
+obj1.constructor = Obj;                                      // = или у объекта создать поле constructor, соответствующее функции-конструктору
+let obj2 = new obj1.constructor();
+console.log( obj1.id, obj2.id );
+
+</script>

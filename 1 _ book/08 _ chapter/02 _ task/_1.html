@@ -1,5 +1,15 @@
 <script>
 
+function Rabbit() {}
+Rabbit.prototype = { eats: true };
 
+let rabbit = new Rabbit();
+
+// Rabbit.prototype = {};         // log( true      ) - т.е. замена прототипа на уже созданные объекты не повлияет
+// Rabbit.prototype.eats = false; // log( false     ) - т.е. изменения в прототипе становятся видны у наследников
+// delete rabbit.eats;            // log( true      ) - т.е. удаление из rabbit не произойдёт, т.к. в нём ничего и нет
+// delete Rabbit.prototype.eats;  // log( undefined ) - т.е. удаление из прототипа сработает, и rabbit потеряет доступ к свойству
+
+console.log( rabbit.eats );       // true , в начальном виде
 
 </script>

@@ -1,0 +1,19 @@
+<script>
+
+function shuffle(array)
+{
+    for (let i = 0; i < array.length - 1; i++)
+    {
+        let j = i + Math.floor(Math.random() * (array.length - i));
+        let temp = array[i];
+        array[i] = array[j];
+        array[j] = temp;
+    }
+}
+
+let arr = [1, 2, 3];
+console.log(shuffle(arr));
+console.log(shuffle(arr));
+console.log(shuffle(arr));
+
+</script>

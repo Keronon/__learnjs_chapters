@@ -1,5 +1,15 @@
 <script>
 
+class Rabbit extends Object
+{
+    constructor(name)
+    {
+        super(); // необходим вызов родительского конструктора
+        this.name = name;
+    }
+}
+let rabbit = new Rabbit("Кроль");
 
+console.log( rabbit.hasOwnProperty('name') ); // true
 
 </script>

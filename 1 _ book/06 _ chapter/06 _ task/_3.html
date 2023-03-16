@@ -1,0 +1,11 @@
+<script>
+
+function sayHi() { console.log( this.name ); }
+
+sayHi.test = 5;
+
+let bound = sayHi.bind( {name: "Вася"} );
+
+console.log( bound.test ); // undefined , т.к. результат - это новая функция, основанная на определении sayHi, которая не имеет поля test
+
+</script>

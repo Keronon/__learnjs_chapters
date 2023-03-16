@@ -1,5 +1,24 @@
 <script>
 
+function printNumbers_v1(from, to)
+{
+    let interval = setInterval( () =>
+    {
+        console.log(from);
+        from >= to ? clearInterval(interval) : from++;
+    }, 1000);
+}
+function printNumbers_v2(from, to)
+{
+    setTimeout( _f = () =>
+    {
+        console.log(from);
+        if (from < to) setTimeout(_f, 1000);
+        from++;
+    }, 1000);
+}
 
+printNumbers_v1(1, 4)
+printNumbers_v2(6, 12)
 
 </script>

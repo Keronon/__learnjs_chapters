@@ -1,0 +1,33 @@
+<script>
+
+function formatDate(date)
+{
+    let year    = date.getFullYear();
+    let month   = date.getMonth() + 1;
+    let day     = date.getDate();
+    let hours   = date.getHours();
+    let minutes = date.getMinutes();
+
+    let d_milisec = new Date() - date;
+    let d_sec     = Math.floor(d_milisec / 1000);
+    let d_min     = d_sec / 60;
+    let d_hours   = d_min / 60;
+
+    year    = year.toString().slice(-2);
+    month   = month   < 10 ? '0' + month   : month;
+    day     = day     < 10 ? '0' + day     : day;
+    hours   = hours   < 10 ? '0' + hours   : hours;
+    minutes = minutes < 10 ? '0' + minutes : minutes;
+
+         if (d_sec   < 1) return 'прямо сейчас';
+    else if (d_min   < 1) return `${d_sec} сек. назад`
+    else if (d_hours < 1) return `${d_min} мин. назад`
+    else
+        return `${day}.${month}.${year} ${hours}:${minutes}`;
+}
+console.log( formatDate( new Date(new Date - 1)                   ) ); // "прямо сейчас"
+console.log( formatDate( new Date(new Date - 30 * 1000)           ) ); // "30 сек. назад"
+console.log( formatDate( new Date(new Date - 5 * 60 * 1000)       ) ); // "5 мин. назад"
+console.log( formatDate( new Date(new Date - 24 * 60 * 60 * 1000) ) ); // вчера в это же время
+
+</script>

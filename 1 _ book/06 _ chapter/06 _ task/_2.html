@@ -1,0 +1,9 @@
+<script>
+
+function f() { console.log(this.name); }
+
+f = f.bind( {name: "Вася"} ).bind( {name: "Петя"} ); // второй bind НЕ сработает, т.к. нельзя осуществить привязку поверх уже созданной
+
+f();
+
+</script>

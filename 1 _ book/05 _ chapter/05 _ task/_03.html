@@ -1,0 +1,12 @@
+<script>
+
+function filterRangeInPlace(arr, range_from, range_to)
+{
+    arr.forEach((num, i) => { if (num < range_from || num > range_to) arr.splice(i, 1); });
+}
+
+let arr = [5, 3, 8, 1];
+filterRangeInPlace(arr, 1, 4);
+console.log( arr );            // [3, 1]
+
+</script>

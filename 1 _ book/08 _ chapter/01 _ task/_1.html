@@ -1,5 +1,13 @@
 <script>
 
+let animal = { jumps: null };
+let rabbit = { __proto__: animal,
+               jumps: true };
 
+console.log( rabbit.jumps ); // true , от объекта
+delete rabbit.jumps;
+console.log( rabbit.jumps ); // null , от родительского объекта, т.к. в текущем не найдено
+delete animal.jumps;
+console.log( rabbit.jumps ); // undefined , т.к. не найдено
 
 </script>

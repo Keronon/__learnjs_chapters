@@ -1,5 +1,16 @@
 <script>
 
-
+function makeCounter() {
+    let count = 0;
+    return function() {
+        return count++;
+    };
+}
+let counter = makeCounter();  // счётчики counter и counter2 независимы,
+let counter2 = makeCounter(); // т.к. представляют собой разные заново инициализируемые функции
+console.log( counter() );  // 0
+console.log( counter() );  // 1
+console.log( counter2() ); // 0
+console.log( counter2() ); // 1
 
 </script>

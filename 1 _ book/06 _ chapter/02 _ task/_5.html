@@ -1,0 +1,15 @@
+<script>
+
+function inBetween(min, max)
+{
+    return (val) => val >= min && val <= max;
+}
+function inArray(arr)
+{
+    return (val) => arr.includes(val);
+}
+let arr = [1, 2, 3, 4, 5, 6, 7];
+alert( arr.filter(inBetween(3, 6)) );     // 3,4,5,6
+alert( arr.filter(inArray([1, 2, 10])) ); // 1,2
+
+</script>

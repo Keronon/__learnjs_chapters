@@ -1,0 +1,17 @@
+<script>
+
+function Accumulator(startingValue)
+{
+    this.value = startingValue || 0;
+    this.read = function()
+    {
+        this.value += +prompt(`Сколько добавим? >>`);
+    };
+}
+
+let accumulator = new Accumulator(1); // начальное значение 1
+accumulator.read();                   // прибавит ввод prompt к текущему значению
+accumulator.read();                   // прибавит ввод prompt к текущему значению
+alert(accumulator.value);             // выведет сумму этих значений
+
+</script>

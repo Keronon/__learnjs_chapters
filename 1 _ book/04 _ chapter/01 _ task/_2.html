@@ -1,0 +1,19 @@
+<script>
+
+let isEmpty = obj => Object.keys(obj).length === 0;
+
+let schedule = {};
+
+alert( isEmpty(schedule) ); // true
+
+schedule["8:30"] = "get up";
+
+alert( isEmpty(schedule) ); // false
+
+// = = = = = . = = = = = . = = = = =
+
+const user = { name: "John" };
+
+user.name = "Pete"; // да, это будет работать
+
+</script>

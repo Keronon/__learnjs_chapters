@@ -1,5 +1,9 @@
 <script>
 
+function f() { console.log( this ); } // глобальный объект ( Window )
 
+let user = { g: f.bind(null) };
+
+user.g();
 
 </script>

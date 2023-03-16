@@ -1,5 +1,11 @@
 <script>
 
-
+new Promise( function(resolve, reject)
+{
+    setTimeout(() =>
+    {
+        throw new Error("Whoops!");
+    }, 1000);
+}).catch(console.log); // catch не запуститься, т.к. он не может поймать асинхронную ошибку
 
 </script>

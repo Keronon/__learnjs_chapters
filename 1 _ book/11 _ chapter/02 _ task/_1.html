@@ -1,5 +1,11 @@
 <script>
 
+let promise = new Promise(function(resolve, reject)
+{
+    resolve(1);
+    setTimeout(() => resolve(2), 1000); // выполнено не будет, т.к. обещание уже выдало результат
+});
 
+promise.then(console.log);
 
 </script>

@@ -1,0 +1,35 @@
+<script>
+
+function Calculator()
+{
+    this[`+`] = (v_1, v_2) => v_1 + v_2;
+    this[`-`] = (v_1, v_2) => v_1 - v_2;
+
+    this.calculate = function(str)
+    {
+        let operation = str.split(' ');
+        let v_1  = +operation[0];
+        let v_2  = +operation[2];
+        let func =  operation[1];
+
+        if (!this[func] || isNaN(v_1) || isNaN(v_2))
+            return undefined;
+
+        return this[func](v_1, v_2);
+    }
+
+    this.addMethod = function(name, func)
+    {
+        this[name] = func;
+    };
+}
+
+let calc = new Calculator;
+console.log( calc.calculate("3 + 7") ); // 10
+
+calc.addMethod("*" , (a, b) => a  * b);
+calc.addMethod("/" , (a, b) => a  / b);
+calc.addMethod("**", (a, b) => a ** b);
+console.log( calc.calculate("2 ** 3") ); // 8
+
+</script>
