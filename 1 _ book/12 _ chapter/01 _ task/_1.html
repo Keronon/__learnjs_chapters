@@ -1,5 +1,20 @@
 <script>
 
+function* pseudoRandom(seed)
+{
+    let value = seed || 0;
 
+    while (true)
+    {
+        value = value * 17200107 / 23200311;
+        yield value;
+    }
+}
+
+let generator = pseudoRandom(1);
+console.log(generator);
+console.log(generator.next().value); // 0.7413739841677123
+console.log(generator.next().value); // 0.5496353844007072
+console.log(generator.next().value); // 0.40748537477270436
 
 </script>

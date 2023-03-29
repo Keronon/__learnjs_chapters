@@ -28,3 +28,7 @@ repo for : nodeJS pre-working learning
     - 2 tasks
   - 11th chapter
     - 5 tasks
+  - 12th chapter
+    - 1 task
+  - 14th chapter
+    - 4 tasks
